@@ -1,7 +1,7 @@
-import Header from "../components/Header";
 import {FC, useEffect} from "react";
 import {useRouter} from "next/router";
 import Head from "next/head";
+import Heading from "../components/Heading";
 
 
 const Error: FC = () => {
@@ -23,7 +23,7 @@ const Error: FC = () => {
                 <title>404</title>
             </Head>
 
-            <Header text='Ошибка 404' />
+            <Heading text='Ошибка 404' />
             <p>Такой страницы не существует, другалек</p>
         </>
     )

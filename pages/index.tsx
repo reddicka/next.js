@@ -21,6 +21,12 @@ export const getStaticProps: GetStaticProps = async () => {
                 notFound: true
             }
         }
+
+        return {
+            props: {
+                socials: data
+            }
+        }
     } catch {
         return {
             props: {

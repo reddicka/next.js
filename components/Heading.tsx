@@ -1,12 +1,12 @@
-import {FC} from "react";
+import React, {FC, HTMLAttributes} from "react";
 
 type headingProps = {
-    tag?: string
+    tag?: keyof JSX.IntrinsicElements
     text: string
 }
 
-const Heading: FC<headingProps> = ({tag, text}) => {
-    const Tag = tag || 'h1'
+const Heading: FC<headingProps> = ({tag = 'h1', text}) => {
+    const Tag = tag
 
     return (
         <>

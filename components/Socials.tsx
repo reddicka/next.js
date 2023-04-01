@@ -15,9 +15,9 @@ const Socials: FC<socialsType> = ({socials}) => {
 
     return (
         <>
-            <Head>
-                <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css"/>
-            </Head>
+            {/*<Head>*/}
+            {/*    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.css"/>*/}
+            {/*</Head>*/}
 
             <ul className={styles.socials}>
                 {
