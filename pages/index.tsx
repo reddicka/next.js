@@ -12,18 +12,20 @@ type homeProps = {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch(`${process.env.API_HOST}/socials`)
-    const data = await response.json()
+    try {
+        const response = await fetch(`${process.env.API_HOST}/socials`)
+        const data = await response.json()
 
-    if (!data) {
-        return {
-            notFound: true
+        if (!data) {
+            return {
+                notFound: true
+            }
         }
-    }
-
-    return {
-        props: {
-            socials: data
+    } catch {
+        return {
+            props: {
+                socials: null
+            }
         }
     }
 }
@@ -38,9 +40,9 @@ const Home: FC<homeProps> = ({socials}) => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
 
-            <Heading text='Домашняе' />
+            <Heading text='Домашняе'/>
 
-            <Socials socials={socials} />
+            <Socials socials={socials}/>
         </div>
     )
 }
